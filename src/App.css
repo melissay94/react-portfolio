@@ -1,38 +1,47 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.mapHolder {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.locationsMap {
+  position: relative;
+}
+.city {
+  max-width: 6rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 3px solid gray;
+  border-radius: 15%;
+  padding: 3px;
+  position: absolute;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.city:hover {
+  background-color: gray;
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+#seattle {
+  top: 1.5em;
+  left: 4.5em;
+}
+
+#san-diego {
+  top: 15em;
+  left: 5.5em;
+}
+
+#rochester {
+  top: 4.8em;
+  left: 25.5em;
+}
+
+#charlottesville {
+  top: 9.4em;
+  left:22.5em;
+}
+
+#new-milford {
+  top: 5.5em;
+  left: 35em;
 }

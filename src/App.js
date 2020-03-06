@@ -13,6 +13,7 @@ import Home from "./Home.js";
 import Projects from "./Projects.js";
 import Blog from "./Blog.js";
 import About from "./About.js";
+import YeehawJS from "./YeehawJS.jpg";
 
 const useStyles = makeStyles({
   root: {
@@ -23,7 +24,12 @@ const useStyles = makeStyles({
 
 function App() {
 
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState([{
+    title: "Thoughts and Feelings",
+    body: "Oh JavaScript. The Backbone of the internet (pun intended). Anyone who's been on the internet has undoubtedly been touched by it. It's in your buttons, it's in your cool animations, heck, sometimes it's even in our servers. It's used diversely, and has so many tools, frameworks, and templates made with it every day. It's versitility is a blessing and a curse to it's developers. While there are guidelines and some rules in place to try and bring some order to it's existance of a whole, it's loosey goosey ways are still apparent in most code bases. For this reason, I refer to it as the Wild West of Programming. Organized attempts of civilization within a lawless land of 'anything goes'.",
+    image: YeehawJS,
+    date: "03/04/2020"
+  }]);
   const [tabIndex, setTabIndex] = useState(0);
 
   const classes = useStyles();
