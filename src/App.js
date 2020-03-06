@@ -1,25 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from "react-router-dom";
 import './App.css';
+import Home from "./Home.js";
+import Projects from "./Projects.js";
+import Blog from "./Blog.js";
+import About from "./About.js";
 
 function App() {
+
+  const [posts, setPosts] = useState([]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <nav>
+          <span><Link to="/home">Home</Link></span>
+          <span><Link to="/projects">Projects</Link></span>
+          <span><Link to="/blog">Blog</Link></span>
+          <span><Link to="/about">About</Link></span>
+        </nav>
+      </div>
+      <Route path="/home" render={() => <Home />} />
+      <Route path="/projects" render={() => <Projects />} />
+      <Route path="/blog" render={() => <Blog posts={posts}/>} />
+      <Route path="/about" render={() => <About />} />
+    </Router>
   );
 }
 
